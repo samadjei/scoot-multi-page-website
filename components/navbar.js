@@ -4,18 +4,22 @@ import { Button } from '../components/button';
 
 const Navbar = () => {
 	return (
-		<nav className="logo container">
-			<Image src="/logo.svg" alt="Scoot logo" width={107.82} height={28.56} alt="Logo" />
-			<div className="nav-items">
-				<Link href="/about">
-					<a>About Us</a>
-				</Link>
-				<Link href="/about">
-					<a>Location</a>
-				</Link>
-				<Link href="/about">
-					<a>Careers</a>
-				</Link>
+		<nav className="navbar container">
+			<div className="navbar__left">
+				<div className="navbar__logo">
+					<Image src="/logo.svg" alt="Scoot logo" width={107.82} height={28.56} alt="Logo" />
+				</div>
+				<div className="navbar__links">
+					<Link href="/about">
+						<a>About Us</a>
+					</Link>
+					<Link href="/location">
+						<a>Location</a>
+					</Link>
+					<Link href="/careers">
+						<a>Careers</a>
+					</Link>
+				</div>
 			</div>
 			<div className="cta">
 				<Link href="/">

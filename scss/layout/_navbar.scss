@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.navbar {
+	@include flex-center;
+	justify-content: space-between;
+	height: 9.6rem;
+	background-color: $snow;
+
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+	&__logo {
+		margin-right: 5.818rem;
+	}
+
+	&__links {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 3.2rem;
+		color: $dark-navy;
+	}
+}

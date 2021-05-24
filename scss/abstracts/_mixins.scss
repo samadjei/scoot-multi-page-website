@@ -22,11 +22,17 @@
 // }
 
 // Button hover
-@mixin hover() {
-	transition: transform 350ms ease-in-out;
+// @mixin hover() {
+// 	transition: transform 350ms ease-in-out;
 
-	&hover,
-	&:focus {
-		cursor: pointer;
-	}
+// 	&hover,
+// 	&:focus {
+// 		cursor: pointer;
+// 	}
+// }
+
+@mixin flex-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
