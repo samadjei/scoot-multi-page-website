@@ -1,7 +1,12 @@
-@use 'variables';
+@use 'colours';
+
+@mixin headers {
+	font-family: 'Space Mono';
+	font-weight: bold;
+	color: colours.$dark-navy;
+}
 
 // Pseudo Elements
-
 @mixin pseudo($loc: after, $content: '', $pos: absolute, $top: 0, $bottom: 0, $left: 0, $right: 0) {
 	position: relative;
 
@@ -17,11 +22,11 @@
 // }
 
 // Button hover
-@mixin hover-lift() {
+@mixin hover() {
 	transition: transform 350ms ease-in-out;
 
 	&hover,
 	&:focus {
-		transform: scale(1.05);
+		cursor: pointer;
 	}
 }
