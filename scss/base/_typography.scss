@@ -1,4 +1,4 @@
-@use '../abstracts/colours';
+@use '../abstracts/colours' as *;
 @use '../abstracts/mixins';
 
 h1,
@@ -13,6 +13,7 @@ h1 {
 	line-height: -2.5;
 	line-height: 5.6rem;
 	letter-spacing: -2.5px;
+	color: $white;
 }
 
 h2 {
@@ -39,5 +40,5 @@ h4 {
 p {
 	font-size: 1.5rem;
 	line-height: 2.5rem;
-	color: colours.$dark-navy;
+	color: $dark-navy;
 }

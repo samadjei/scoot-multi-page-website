@@ -1,11 +1,10 @@
 import React from 'react';
+import Hero from '../components/hero';
 
 const Homepage = () => {
 	return (
 		<main>
-			<h1 className="title">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
-			</h1>
+			<Hero />
 		</main>
 	);
 };

@@ -13,13 +13,13 @@
 
 // First Button
 .btn--primary {
-	color: $snow;
+	color: $white;
 	background-color: $yellow;
 	transform: all 350ms ease-out;
 	&:hover,
 	&:focus {
 		color: $yellow;
-		background-color: $snow;
+		background-color: $white;
 		border: 3px solid $yellow;
 		cursor: pointer;
 	}
