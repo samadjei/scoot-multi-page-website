@@ -36,3 +36,9 @@
 	justify-content: center;
 	align-items: center;
 }
+
+// Features Image 
+@mixin features(){
+	max-width: 44.5rem;
+	border-radius: 50%;
+}

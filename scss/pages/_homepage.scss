@@ -18,7 +18,7 @@
 		background-image: url('../../public/assets/patterns/line.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 20rem;
+		width: 42rem;
 		height: 1.5rem;
 		right: -3rem;
 		top: 60%;
@@ -32,7 +32,7 @@
 		background-size: cover;
 		width: 44.7rem;
 		height: 13.8rem;
-		right: 35%;
+		right: 50rem;
 		top: 60%;
 	}
 
@@ -72,7 +72,6 @@
 // PROCESS
 .process {
 	padding-top: 16rem;
-	padding-bottom: 16rem;
 	position: relative;
 
 	&::before {
@@ -103,5 +102,109 @@
 	&__description {
 		max-width: 35rem;
 	}
+}
 
+// FEATURES
+
+.options {
+	padding-top: 16rem;
+}
+
+.feature {
+	padding-top: 20rem;
+	padding-bottom: 4rem;
+	&__image {
+		@include features;
+	}
+	&__content {
+		max-width: 44.5rem;
+	}
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+	}
+	&--description {
+		padding-top: 2.4rem;
+		padding-bottom: 4rem;
+	}
+}
+
+// Telemetry
+.telemetry {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/patterns/circle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 44.5rem;
+		height: 44.5rem;
+		right: -35rem;
+		top: 21rem;
+		z-index: -1;
+	}
+
+	&__arrow {
+		position: relative;
+
+		&-image {
+			position: absolute;
+			right: 0;
+			bottom: 70%;
+		}
+	}
+}
+
+// CITY
+.city {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/patterns/circle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 44.5rem;
+		height: 44.5rem;
+		left: -35rem;
+		top: 21rem;
+		z-index: -1;
+	}
+
+	&__image {
+		position: absolute;
+		z-index: 1;
+		left: -5rem;
+	}
+
+	&__right {
+		max-width: 44.5rem;
+		border-radius: 50%;
+	}
+}
+
+// PAYMENTS
+.payment {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/patterns/circle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 44.5rem;
+		height: 44.5rem;
+		right: -35rem;
+		top: 21rem;
+		z-index: -1;
+	}
+
+	&__image {
+		position: absolute;
+		z-index: 1;
+		top: 25rem;
+		right: -14rem;
+	}
 }
