@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../../components/button';
+import { Button } from '../button';
 
-const Telemetry = () => {
+const Features = () => {
 	return (
 		<section className="telemetry feature">
 			<div className="feature__inner container">
@@ -70,4 +70,4 @@ const Telemetry = () => {
 	);
 };
 
-export default Telemetry;
+export default Features;

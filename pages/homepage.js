@@ -1,13 +1,13 @@
 import Hero from '../components/homepage/hero';
 import Process from '../components/homepage/process';
-import Telemetry from '../components/homepage/telemetry';
+import Features from '../components/homepage/features';
 
 const Homepage = () => {
 	return (
 		<main>
 			<Hero />
 			<Process />
-			<Telemetry />
+			<Features />
 		</main>
 	);
 };

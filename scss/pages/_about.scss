@@ -7,6 +7,7 @@
 		background: url('../../public/assets/images/about-hero-desktop.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		overflow: hidden;
 		@include flex-center;
 		justify-content: space-between;
 
@@ -21,5 +22,56 @@
 			right: -4rem;
 			top: 8rem;
 		}
+	}
+}
+
+.highlight {
+	padding: 12rem 0;
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+	}
+	&__content {
+		max-width: 44.5rem;
+	}
+}
+
+.highlight {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/patterns/circle.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 44.5rem;
+		height: 44.5rem;
+		right: -35rem;
+		top: 11rem;
+		z-index: -1;
+	}
+}
+
+.digital {
+	overflow: hidden;
+	&__arrow {
+		position: relative;
+
+		&-image {
+			position: absolute;
+			right: 0;
+			bottom: 70%;
+		}
+	}
+}
+
+.urban {
+	padding-top: 12rem;
+	position: relative;
+	&__image {
+		position: absolute;
+		z-index: 1;
+		left: 0;
 	}
 }
