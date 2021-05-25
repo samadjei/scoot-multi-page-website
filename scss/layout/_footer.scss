@@ -2,9 +2,22 @@
 
 .footer {
 	margin-top: 16rem;
-	background: $dark-navy;
 	&__top {
 		padding: 10.2rem 0;
+		position: relative;
+		overflow: hidden;
+		background: $dark-navy;
+
+		&-bg {
+			position: absolute;
+			bottom: 0;
+			right: -15rem;
+		}
+
+		&-inner {
+			@include flex-center;
+			justify-content: space-between;
+		}
 	}
 
 	&--title {
@@ -13,8 +26,49 @@
 	}
 
 	&__apps {
-		&__child {
+		display: flex;
+		&-child {
 			margin-right: 1.8rem;
 		}
 	}
+
+	&__bottom {
+		background-color: #333a44;
+		&-inner {
+			@include flex-center;
+			justify-content: space-between;
+			height: 9.6rem;
+		}
+
+		&-left {
+			@include flex-center;
+			justify-content: space-between;
+		}
+
+		&-logo {
+			margin-right: 5.818rem;
+		}
+
+		&-links {
+			font-family: 'Space Mono';
+			display: grid;
+			align-items: center;
+			justify-content: space-between;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 3.2rem;
+			color: $dime-grey;
+		}
+
+		// Footer Bottom Right
+		&-right {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 12rem;
+		}
+	}
+}
+
+.twitter {
+	display: none;
 }
