@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+.about {
+	&__hero {
+		position: relative;
+		height: 20rem;
+		background: url('../../public/assets/images/about-hero-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include flex-center;
+		justify-content: space-between;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../../public/assets/patterns/white-circles.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 23.4rem;
+			height: 6.3rem;
+			right: -4rem;
+			top: 8rem;
+		}
+	}
+}

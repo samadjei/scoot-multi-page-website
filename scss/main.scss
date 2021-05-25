@@ -1,5 +1,7 @@
 @use 'abstracts/mixins' as *;
 @use 'abstracts/colours' as *;
+@use 'abstracts/variables' as *;
+@use 'abstracts/breakpoints' as *;
 
 @use 'base/reset' as *;
 @use 'base/typography' as *;
@@ -11,6 +13,9 @@
 @use 'layout/navbar' as *;
 
 @use 'pages/homepage' as *;
+@use 'pages/about' as *;
+@use 'pages/location' as *;
+@use 'pages/careers' as *;
 
 *,
 *::after,

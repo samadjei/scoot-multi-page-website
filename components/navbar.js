@@ -7,7 +7,9 @@ const Navbar = () => {
 		<nav className="navbar container">
 			<div className="navbar__left">
 				<div className="navbar__logo">
-					<Image src="/logo.svg" alt="Scoot logo" width={107.82} height={28.56} alt="Logo" />
+					<Link href="/">
+						<Image src="/logo.svg" alt="Scoot logo" width={107.82} height={28.56} alt="Logo" />
+					</Link>
 				</div>
 				<div className="navbar__links">
 					<Link href="/about">

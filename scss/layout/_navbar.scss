@@ -12,6 +12,10 @@
 	}
 	&__logo {
 		margin-right: 5.818rem;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
 	}
 
 	&__links {
