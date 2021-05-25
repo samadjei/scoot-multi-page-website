@@ -15,9 +15,10 @@
 	}
 
 	&__links {
+		font-family: 'Space Mono';
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 3.2rem;
-		color: $dark-navy;
+		color: $dime-grey;
 	}
 }

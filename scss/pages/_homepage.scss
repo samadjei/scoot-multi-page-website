@@ -1,3 +1,107 @@
-.title {
-	text-align: center;
+@use '../abstracts/' as *;
+
+// HERO
+.hero {
+	background: url('../../public/assets/images/home-hero-desktop.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 65rem;
+	overflow: hidden;
+	@include flex-center;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		background-image: url('../../public/assets/patterns/line.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 20rem;
+		height: 1.5rem;
+		right: -3rem;
+		top: 60%;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/patterns/right-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 44.7rem;
+		height: 13.8rem;
+		right: 35%;
+		top: 60%;
+	}
+
+	&__circle {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../../public/assets/patterns/white-circles.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 23.4rem;
+			height: 6.3rem;
+			right: -4rem;
+			top: 12.2rem;
+		}
+	}
+
+	&__flex {
+		flex-direction: column;
+		text-align: left;
+		max-width: 49.5rem;
+	}
+
+	&__inner {
+		max-width: 40.5rem;
+		margin-left: auto;
+	}
+
+	&__description {
+		color: $white;
+		padding: 4rem 0;
+	}
+}
+
+// PROCESS
+.process {
+	padding-top: 16rem;
+	padding-bottom: 16rem;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 125rem;
+		height: 1.5rem;
+		left: 0;
+		top: 20rem;
+		background-color: $light-grey;
+		z-index: -1;
+	}
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+		justify-content: start;
+		align-items: center;
+		grid-gap: 3rem;
+		z-index: 3;
+		max-width: 127.5rem;
+	}
+
+	&__title {
+		padding-top: 4rem;
+		padding-bottom: 2.7rem;
+	}
+
+	&__description {
+		max-width: 35rem;
+	}
+
 }
