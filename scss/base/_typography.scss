@@ -6,11 +6,12 @@ h2,
 h3,
 h4 {
 	@include mixins.headers;
+	font-family: 'Space Mono';
+	font-weight: 700;
 }
 
 h1 {
 	font-size: 5.6rem;
-	line-height: -2.5;
 	line-height: 5.6rem;
 	letter-spacing: -2.5px;
 	color: $white;
@@ -41,4 +42,5 @@ p {
 	font-size: 1.5rem;
 	line-height: 2.5rem;
 	color: $dime-grey;
+	font-family: 'Lexend Deca';
 }

@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+.faq {
+	&__inner {
+		width: 100%;
+		max-width: 73rem;
+		margin: 0 auto;
+	}
+}
+
+.faq {
+	padding: 3.2rem 4rem;
+	background: #f2f5f9;
+	margin-bottom: 1.6rem;
+
+	&--question {
+		position: relative;
+		transition: all 0.4s ease;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: -30%;
+			height: 70%;
+			width: 70%;
+			background-image: url('../../public/assets/icons/chevron.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			transition: all 0.4s ease-out;
+		}
+	}
+
+	&--answer {
+		// padding-top: 2.4rem;
+		opacity: 0;
+		max-height: 0;
+		overflow-y: hidden;
+	}
+}
+
+.faqs .faq.open .faq--question {
+	margin-bottom: 1.5rem;
+	transition: all 0.4s ease;
+}
+.faqs .faq.open .faq--question::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.open .faq--answer {
+	max-height: 100rem;
+	opacity: 1;
+}
+
+.faq__works {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+

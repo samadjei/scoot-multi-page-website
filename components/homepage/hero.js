@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { Button } from '../button';
+import Image from 'next/image';
 
 const Hero = () => {
 	return (
 		<section className="hero">
+			{/* <Image className="image" src="/public/assets/patterns/line.svg" width={202.5} height={15} /> */}
 			<div className="container">
 				<div className="hero__flex">
 					<h1>Scooter sharing made simple</h1>
