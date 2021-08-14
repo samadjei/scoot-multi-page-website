@@ -61,4 +61,7 @@ img {
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
+	@include breakpoint(medium) {
+		padding: 0 2rem;
+	}
 }

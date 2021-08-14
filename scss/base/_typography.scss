@@ -1,11 +1,12 @@
-@use '../abstracts/colours' as *;
-@use '../abstracts/mixins';
+// @use '../abstracts/colours' as *;
+@use '../abstracts/' as *;
+
 
 h1,
 h2,
 h3,
 h4 {
-	@include mixins.headers;
+	@include headers;
 	font-family: 'Space Mono';
 	font-weight: 700;
 }
@@ -14,7 +15,9 @@ h1 {
 	font-size: 5.6rem;
 	line-height: 5.6rem;
 	letter-spacing: -2.5px;
+	margin: 0;
 	color: $white;
+	
 }
 
 h2 {

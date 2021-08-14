@@ -1,9 +1,9 @@
-@use 'colours';
+@use 'colours' as *;
 
 @mixin headers {
 	font-family: 'Space Mono';
 	font-weight: bold;
-	color: colours.$dark-navy;
+	color: $dark-navy;
 }
 
 // Pseudo Elements
@@ -37,8 +37,8 @@
 	align-items: center;
 }
 
-// Features Image 
-@mixin features(){
+// Features Image
+@mixin features() {
 	max-width: 44.5rem;
 	border-radius: 50%;
 }

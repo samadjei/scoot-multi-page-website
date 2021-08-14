@@ -22,6 +22,9 @@
 		height: 1.5rem;
 		right: -3rem;
 		top: 60%;
+		@include breakpoint(medium) {
+			display: none;
+		}
 	}
 
 	&::after {
@@ -34,6 +37,9 @@
 		height: 13.8rem;
 		right: 50rem;
 		top: 60%;
+		@include breakpoint(medium) {
+			top: 75%;
+		}
 	}
 
 	&__circle {
@@ -49,29 +55,44 @@
 			height: 6.3rem;
 			right: -4rem;
 			top: 12.2rem;
+			@include breakpoint(medium) {
+				top: 22rem;
+			}
 		}
 	}
 
 	&__flex {
+		display: flex;
 		flex-direction: column;
 		text-align: left;
 		max-width: 49.5rem;
+		@include breakpoint(medium) {
+			text-align: center;
+			margin: auto;
+			max-width: 57.3rem;
+		}
 	}
 
 	&__inner {
 		max-width: 40.5rem;
 		margin-left: auto;
+		@include breakpoint(medium) {
+			max-width: 57.3rem;
+			margin: auto;
+		}
 	}
 
 	&__description {
 		color: $white;
 		padding: 4rem 0;
+		@include breakpoint(medium) {
+			padding: 2.4rem 0;
+		}
 	}
 }
 
 .image {
 	z-index: 999;
-	
 }
 
 // PROCESS
