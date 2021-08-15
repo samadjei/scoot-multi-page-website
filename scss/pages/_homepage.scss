@@ -41,6 +41,10 @@
 		@include breakpoint(medium) {
 			top: 75%;
 		}
+		@include breakpoint(small) {
+			top: 70%;
+			right: 25rem;
+		}
 	}
 
 	&__circle {
@@ -59,6 +63,9 @@
 			@include breakpoint(medium) {
 				top: 22rem;
 			}
+			@include breakpoint(small) {
+				display: none;
+			}
 		}
 	}
 
@@ -71,6 +78,9 @@
 			text-align: center;
 			margin: auto;
 			max-width: 57.3rem;
+		}
+		@include breakpoint(small) {
+			max-width: 31.1rem;
 		}
 	}
 
