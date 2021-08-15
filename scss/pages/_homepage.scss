@@ -109,10 +109,14 @@
 // PROCESS
 .process {
 	padding-top: 16rem;
+	@include breakpoint(medium) {
+		padding-top: 12.2rem;
+	}
 	position: relative;
 
 	&::before {
 		content: '';
+		display: inline-block;
 		position: absolute;
 		width: 125rem;
 		height: 1.5rem;
@@ -120,6 +124,14 @@
 		top: 20rem;
 		background-color: $light-grey;
 		z-index: -1;
+		@include breakpoint(medium) {
+			transform: rotate(90deg);
+			left: -23rem;
+			width: 93rem;
+		}
+		@include breakpoint(small) {
+			display: none;
+		}
 	}
 	&__inner {
 		display: grid;
@@ -127,8 +139,29 @@
 		justify-content: start;
 		align-items: center;
 		grid-gap: 3rem;
+		@include breakpoint(medium) {
+			grid-template-columns: repeat(auto-fit, minmax(57.3rem, 1fr));
+			justify-content: center;
+			align-items: center;
+			grid-gap: 4rem;
+		}
 		z-index: 3;
 		max-width: 127.5rem;
+	}
+
+	&__item {
+		@include breakpoint(medium) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 57.3rem;
+			margin: auto;
+		}
+		@include breakpoint(small) {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
 	}
 
 	&__title {
@@ -138,6 +171,9 @@
 
 	&__description {
 		max-width: 35rem;
+		@include breakpoint(medium) {
+			max-width: 39.8rem;
+		}
 	}
 }
 
@@ -159,6 +195,9 @@
 	&__inner {
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column-reverse;
+		}
 	}
 	&--description {
 		padding-top: 2.4rem;
@@ -183,6 +222,16 @@
 		z-index: -1;
 	}
 
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
 	&__arrow {
 		position: relative;
 
@@ -190,6 +239,10 @@
 			position: absolute;
 			right: 0;
 			bottom: 70%;
+			@include breakpoint(medium) {
+				margin-bottom: 35rem;
+				left: 15%;
+			}
 		}
 	}
 }

@@ -74,6 +74,7 @@
 	position: absolute;
 	top: 40%;
 	left: 5rem;
+	cursor: pointer;
 	@include breakpoint(small) {
 		display: block;
 	}

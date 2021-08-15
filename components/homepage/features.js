@@ -5,7 +5,7 @@ import { Button } from '../button';
 const Features = () => {
 	return (
 		<section className="telemetry feature">
-			<div className="feature__inner container">
+			<div className="telemetry__inner container">
 				<div className="feature__content">
 					<h2>Easy to use riding telemetry</h2>
 					<p className="feature--description">The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your travelling distance, and many more things all in an easy to use app.</p>
