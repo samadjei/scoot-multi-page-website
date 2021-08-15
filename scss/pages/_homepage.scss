@@ -10,6 +10,7 @@
 	overflow: hidden;
 	@include flex-center;
 	position: relative;
+	z-index: 3;
 
 	&::before {
 		content: '';

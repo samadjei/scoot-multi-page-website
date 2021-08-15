@@ -1,14 +1,27 @@
 @use '../abstracts' as *;
 
 .navbar {
-	@include flex-center;
+	position: sticky;
+	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	height: 9.6rem;
 	background-color: $white;
+	width: 111rem;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+	@include breakpoint(small) {
+		justify-content: center;
+	}
+	z-index: 9;
 
 	&__left {
 		display: flex;
 		align-items: center;
+		@include breakpoint(medium) {
+			justify-content: center;
+		}
 	}
 	&__logo {
 		margin-right: 5.818rem;
@@ -20,9 +33,48 @@
 
 	&__links {
 		font-family: 'Space Mono';
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		// display: grid;
+		// grid-template-columns: repeat(4, 1fr);
+		display: flex;
+		align-items: center;
+		width: 100%;
 		grid-gap: 3.2rem;
 		color: $dime-grey;
+		@include breakpoint(small) {
+			display: flex;
+			text-align: left;
+			align-items: flex-start;
+			flex-direction: column;
+			padding-top: 6.4rem;
+			padding-left: 3.2rem;
+			color: $white;
+			position: absolute;
+			top: 9.6rem;
+			width: 70%;
+			opacity: 1;
+			height: calc(100vh - 9.6rem);
+			left: -100%;
+			&.active {
+				background: #333a44;
+				left: 0;
+				opacity: 1;
+				transition: all 0.5s ease;
+			}
+		}
+	}
+}
+
+// Hamburger
+.fas {
+	display: none;
+	font-size: 2.3rem;
+	width: 1.969rem;
+	height: 1.6rem;
+	color: $yellow;
+	position: absolute;
+	top: 40%;
+	left: 5rem;
+	@include breakpoint(small) {
+		display: block;
 	}
 }
