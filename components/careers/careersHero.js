@@ -1,15 +1,15 @@
 import React from 'react';
 
-const locationHero = () => {
+const careerHero = () => {
 	return (
 		<header className="about about__hero">
 			<div className="container">
 				<div className="about__hero-content">
-					<h1>Location</h1>
+					<h1>Careers</h1>
 				</div>
 			</div>
 		</header>
 	);
 };
 
-export default locationHero;
+export default careerHero;

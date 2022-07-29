@@ -1,18 +1,20 @@
 @use '../abstracts/' as *;
 
 .faq {
+	padding: 3.2rem 4rem;
+	background: #f2f5f9;
+	margin-bottom: 1.6rem;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		background: #fff4df;
+	}
+
 	&__inner {
 		width: 100%;
 		max-width: 73rem;
 		margin: 0 auto;
 	}
-}
-
-.faq {
-	padding: 3.2rem 4rem;
-	background: #f2f5f9;
-	margin-bottom: 1.6rem;
-
 	&--question {
 		position: relative;
 		transition: all 0.4s ease;
@@ -27,8 +29,6 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
-
-			transition: all 0.4s ease-out;
 		}
 	}
 
@@ -58,4 +58,3 @@
 	justify-content: space-between;
 	align-items: flex-start;
 }
-

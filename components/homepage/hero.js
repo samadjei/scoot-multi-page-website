@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Button } from '../button';
-import Image from 'next/image';
 
 const Hero = () => {
 	return (

@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.careers {
+	&__header {
+		max-width: 44.5rem;
+		margin-top: 18.6rem;
+		margin-bottom: 12rem;
+		&-content {
+			padding-top: 2.4rem;
+			padding-bottom: 4rem;
+		}
+	}
+}

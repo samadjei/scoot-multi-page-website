@@ -1,10 +1,13 @@
 import React from 'react';
+import CareersHero from '../components/careers/careersHero';
+import CareersMission from '../components/careers/careersMission';
 
 const Careers = () => {
 	return (
-		<section className="careers">
-			<div className="careers__inner container"></div>
-		</section>
+		<main>
+			<CareersHero />
+			<CareersMission />
+		</main>
 	);
 };
 

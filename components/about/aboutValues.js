@@ -4,9 +4,7 @@ const Values = () => {
 			<div className="container">
 				<h2>Our values</h2>
 			</div>
-			<div>
-				
-			</div>
+			<div></div>
 		</section>
 	);
 };

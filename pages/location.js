@@ -1,14 +1,16 @@
 import React from 'react';
-import Hero from '../components/location/locationHero';
-import Mission from '../components/location/locationMission';
+import Mission from '../components/locations/locationMission';
 import pageHero from '../components/pageHero';
+import Title from '../components/title';
+import Listed from '../components/locations/locationsListed';
 
 const Location = () => {
 	return (
 		<main>
-			<Hero />
+			<Title title="Locations" />
 			<Mission />
 			{/* <pageHero/> */}
+			<Listed />
 		</main>
 	);
 };
