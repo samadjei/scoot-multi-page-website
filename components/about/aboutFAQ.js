@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Faq from '../faq';
+import DrivingFaq from '../faqs/drivingFaq';
 
 const aboutFAQ = () => {
 	const [faqs, setfaqs] = useState([
@@ -18,6 +19,9 @@ const aboutFAQ = () => {
 			answer: 'Yup! We provide information inside the app regarding local laws and the license you need to be able to ride our Scoots.',
 			open: false,
 		},
+	]);
+
+	const [drivingFaq, setDrivingFaq] = useState([
 		{
 			question: 'Should I wear a helmet?',
 			answer: 'Yes, please do! All cities have different laws. But we strongly strongly strongly recommend we want you to be as safe as possible while Scooting.',
@@ -49,16 +53,39 @@ const aboutFAQ = () => {
 		);
 	};
 
+	const switchFaq = (index) => {
+		setDrivingFaq(
+			drivingFaq.map((drivingFaq, i) => {
+				if (i === index) {
+					drivingFaq.open = !drivingFaq.open;
+				} else {
+					drivingFaq.open = false;
+				}
+				return drivingFaq;
+			})
+		);
+	};
+
 	return (
 		<section className="faqs">
 			<div className="container">
-				<h2>FAQs</h2>
+				<h2 className='faq--title'>FAQs</h2>
 				<div className="faq__works">
-					<h3 className='title__top'>How it works</h3>
+					<h3 className="title__top">How it works</h3>
 					<div className="faq__inner">
 						{faqs.map((faq, i) => (
 							<div>
 								<Faq faq={faq} index={i} toggleFAQ={toggleFAQ} />
+							</div>
+						))}
+					</div>
+				</div>
+				<div className="faq__works faq__driving">
+					<h3 className="title__top">Safe Driving</h3>
+					<div className="faq__inner">
+						{drivingFaq.map((faq, i) => (
+							<div>
+								<DrivingFaq faq={faq} index={i} switchFaq={switchFaq} />
 							</div>
 						))}
 					</div>

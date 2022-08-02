@@ -5,6 +5,9 @@
 		position: relative;
 		height: 20rem;
 		background: url('../../public/assets/images/about-hero-desktop.jpg');
+		@include breakpoint(small) {
+			background: url('../../public/assets/images/about-hero-mobile.jpg');
+		}
 		background-size: cover;
 		background-repeat: no-repeat;
 		overflow: hidden;
@@ -12,6 +15,9 @@
 		justify-content: space-between;
 
 		&::after {
+			@include breakpoint(small) {
+				display: none;
+			}
 			content: '';
 			position: absolute;
 			background-image: url('../../public/assets/patterns/white-circles.svg');
@@ -30,9 +36,17 @@
 	&__inner {
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(small) {
+			flex-direction: column-reverse;
+		}
 	}
 	&__content {
 		max-width: 44.5rem;
+		@include breakpoint(small) {
+			width: 90%;
+			text-align: center;
+			margin-top: 5.6rem;
+		}
 	}
 }
 
@@ -50,6 +64,17 @@
 		right: -35rem;
 		top: 11rem;
 		z-index: -1;
+		@include breakpoint(small) {
+			display: none;
+		}
+	}
+
+	&--title {
+		@include breakpoint(small) {
+			font-size: 3.2rem;
+			line-height: 3.2rem;
+			text-align: center;
+		}
 	}
 }
 
@@ -63,25 +88,37 @@
 			position: absolute;
 			right: -10rem;
 			bottom: 4rem;
+			@include breakpoint(small) {
+				bottom: 38rem;
+			}
 		}
 	}
 }
 
 .urban {
-	padding-top: 12rem;
+	margin-top: 12rem;
 	position: relative;
 	&__image {
 		position: absolute;
 		z-index: 1;
 		left: 0;
+		@include breakpoint(small) {
+			bottom: 30rem;
+		}
 	}
 }
 
 .values {
-	padding-top: 12rem;
+	margin-top: 12rem;
+
 	&--title {
 		text-align: center;
-		padding-bottom: 10.3rem;
+		margin-bottom: 10.3rem;
+		@include breakpoint(small) {
+			font-size: 3.2rem;
+			line-height: 3.2rem;
+			margin-bottom: 6.4rem;
+		}
 	}
 	&__grid {
 		display: grid;
