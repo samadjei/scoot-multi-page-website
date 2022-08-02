@@ -1,13 +1,91 @@
 @use '../abstracts/' as *;
 
 .careers {
-	&__header {
-		max-width: 44.5rem;
-		margin-top: 18.6rem;
-		margin-bottom: 12rem;
-		&-content {
-			padding-top: 2.4rem;
-			padding-bottom: 4rem;
+	&__mission {
+		position: relative;
+		overflow: hidden;
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../../public/assets/patterns/circle.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 44.5rem;
+			height: 44.5rem;
+			right: -35rem;
+			top: 11rem;
+			z-index: -1;
+			@include breakpoint(small) {
+				display: none;
+			}
 		}
+	}
+
+	&--title {
+		@include breakpoint(small) {
+			font-size: 32px;
+			line-height: 32px;
+		}
+	}
+	&__header {
+		margin-top: 18.6rem;
+		// margin-bottom: 12rem;
+		display: flex;
+
+		@include breakpoint(small) {
+			flex-direction: column-reverse;
+		}
+
+		&-content {
+			margin-top: 2.4rem;
+			margin-bottom: 4rem;
+			max-width: 44.5rem;
+		}
+	}
+}
+
+.careers__content {
+	@include breakpoint(small) {
+		margin-top: 5.6rem;
+		text-align: center;
+	}
+}
+
+.apply {
+	margin-top: 12rem;
+	&__inner {
+		display: flex;
+		background: $snow;
+		margin-bottom: 2.4rem;
+		padding: 3.2rem;
+		@include breakpoint(small) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	&__text {
+		@include breakpoint(small) {
+			margin-bottom: 1.6rem;
+		}
+	}
+	&--country {
+		font-family: 'Lexend Deca';
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		color: $dark-navy;
+	}
+}
+
+.careers__mission .digital__arrow .digital__arrow-image {
+	right: -10rem;
+	bottom: 15rem;
+	@include breakpoint(medium) {
+		right: -65rem;
+		bottom: 5rem;
+	}
+	@include breakpoint(small) {
+		right: -55rem;
+		bottom: 40rem;
 	}
 }
