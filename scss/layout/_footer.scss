@@ -7,6 +7,9 @@
 	}
 	&__top {
 		padding: 10.2rem 0;
+		@include breakpoint(medium) {
+			padding: 6.2rem 0;
+		}
 		position: relative;
 		overflow: hidden;
 		background: $dark-navy;
@@ -20,12 +23,21 @@
 		&-inner {
 			@include flex-center;
 			justify-content: space-between;
+			@include breakpoint(medium) {
+				flex-direction: column;
+				text-align: center;
+				gap: 4rem;
+			}
 		}
 	}
 
 	&--title {
 		color: $white;
 		max-width: 41.5rem;
+		@include breakpoint(small) {
+			font-size: 3.2rem;
+			line-height: 3.2rem;
+		}
 	}
 
 	&__apps {
@@ -37,19 +49,33 @@
 
 	&__bottom {
 		background-color: #333a44;
+		@include breakpoint(small) {
+			// padding: 6.4rem 0;
+			padding-top: 6.4rem;
+			padding-bottom: 8.8rem;
+		}
 		&-inner {
 			@include flex-center;
 			justify-content: space-between;
-			height: 9.6rem;
+			// height: 9.6rem;
+			@include breakpoint(small) {
+				flex-direction: column;
+			}
 		}
 
 		&-left {
 			@include flex-center;
 			justify-content: space-between;
+			@include breakpoint(small) {
+				flex-direction: column;
+			}
 		}
 
 		&-logo {
 			margin-right: 5.818rem;
+			@include breakpoint(small) {
+				margin-right: 0;
+			}
 		}
 
 		&-links {
@@ -60,6 +86,11 @@
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 3.2rem;
 			color: $dime-grey;
+			@include breakpoint(small) {
+				grid-template-columns: 1fr;
+				padding-top: 4.1rem;
+				padding-bottom: 8.5rem;
+			}
 		}
 
 		// Footer Bottom Right
@@ -70,6 +101,10 @@
 			width: 12rem;
 		}
 	}
+}
+
+.footer .container {
+	overflow: visible;
 }
 
 .twitter {
